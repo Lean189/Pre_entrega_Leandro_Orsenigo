@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shop Homepage - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="{%  static 'appcoder/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container px-5">
+        <a class="navbar-brand" href="#page-top">Instituto Estrada</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'inicio'%}">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'agregar_profesor' %}">Profesores</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'agregar_curso' %}">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'agregar_estudiante' %}">Estudiantes</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'busqueda_camada' %}">Buscar Camada</a></li>
+                <li class="nav-item"><a class="nav-link" href="{#!}">Iniciar Sesión</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">Registrarse</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Instituto Estrada</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Escuela de elite</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            {% block contenidoQueCambia %}
+            <div class="container px-4 px-lg-5 mt-5 text-center" style="background-image: url(''); background-size: cover; background-position: center; padding: 100px 0;">
+                <h1 class="display-4 text-black">Bienvenidos al Instituto Estrada</h1>
+                <p class="lead text-black">Nuestra escuela se dedica a ofrecer educación de calidad en un ambiente seguro y estimulante. Con una amplia gama de programas académicos y actividades extracurriculares, nos esforzamos por fomentar el desarrollo integral de nuestros estudiantes.</p>
+            </div>
+            {% endblock  %}
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
